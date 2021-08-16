@@ -93,7 +93,11 @@ and install Live-server or (https://marketplace.visualstudio.com/items?itemName=
 	  - Click the **import** button then you can see template image in screen
 		 designer and save the template screen.
 ![screencast-gif](https://user-images.githubusercontent.com/72383148/123812943-1fbc3980-d912-11eb-9828-f0701bd81419.gif)
-
+- MongoDB connection establish
+	-Click the connect button
+	-Click edit tab in this move to authentication tab 
+-After set username as admin and password as password
+![Screenshot from 2021-08-16 12-34-16](https://user-images.githubusercontent.com/80459304/129524444-78c1f742-f2a8-43c4-afcb-efdb60d6a576.png)
 - It will store into the mongo db with screens collection. we can get the template data from here.
 
 ![Screenshot from 2021-05-11 19-45-05](https://user-images.githubusercontent.com/71403617/117830710-84073900-b291-11eb-86f3-115d93a56d64.png)
@@ -188,6 +192,13 @@ Now we have new template object in template manager so next need to delete the g
 ![Screenshot from 2021-05-11 21-34-02](https://user-images.githubusercontent.com/71403617/117848177-a94f7380-b2a0-11eb-9cc9-e8bfa6ab58ef.png)
 
 If Navigation type is **Side**, it will go to **sideNavigation function**. Otherwise it will go to **topNavigation function.**
+-After implementing the navigation method we go to our Geppetto builder in our local .
+	-In that click the code generation.
+	-After generate the code there is a new project in our repo ..
+	-Clone the project .
+	-npm i 
+	-Run ng serve --port 0000
+
 # Conclusion:
 Finally we have added the new template to geppetto application  
 ![Screenshot from 2021-05-11 21-39-21](https://user-images.githubusercontent.com/71403617/117848960-76f24600-b2a1-11eb-81a9-e3d1016bf93f.png)
