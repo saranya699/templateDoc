@@ -49,7 +49,7 @@ and install Live-server or (https://marketplace.visualstudio.com/items?itemName=
  
  - [ ]  First, change template align and css, html format to check and then add a **nav** tag
 
-  <nav id="template-i090p" class="navbar navbar-inverse">
+	<nav id="template-i090p" class="navbar navbar-inverse">
         <div id="template-iyoc4" class="navbar-header">
             <span onclick="openNav()" id="in2oj" class="">
                 <i class="fa fa-bars" aria-hidden="true"></i></span>
@@ -90,9 +90,16 @@ and install Live-server or (https://marketplace.visualstudio.com/items?itemName=
 	 - Now click the **Screen** and click **the Add screen** 
 	  - Click the Last download icon which is **import your template** 
 	  - Now place the whatever copied html code from the template html file
+[since,before copy the code from html to grpejs if there is any commented line in this html will remove the commented line before copy the code.If we include the commented line it affects the template generation that is it will show some of the value becomes null].
 	  - Click the **import** button then you can see template image in screen
 		 designer and save the template screen.
 ![screencast-gif](https://user-images.githubusercontent.com/72383148/123812943-1fbc3980-d912-11eb-9828-f0701bd81419.gif)
+MongoDB connection establish
+	Click the connect button
+	Click edit tab in this move to authentication tab 
+After set username as admin and password as password
+	
+![Screenshot from 2021-08-23 10-39-24](https://user-images.githubusercontent.com/80459304/130393641-b6710e3a-08d5-4163-ac18-5b1608cc9e8a.png)
 
 - It will store into the mongo db with screens collection. we can get the template data from here.
 
@@ -188,6 +195,27 @@ Now we have new template object in template manager so next need to delete the g
 ![Screenshot from 2021-05-11 21-34-02](https://user-images.githubusercontent.com/71403617/117848177-a94f7380-b2a0-11eb-9cc9-e8bfa6ab58ef.png)
 
 If Navigation type is **Side**, it will go to **sideNavigation function**. Otherwise it will go to **topNavigation function.**
+		
+After implementing the navigation method then go to our Geppetto builder in our local .
+	-In that click the code generation
+	-After generate the code there is a new project in our repo .
+	-Clone the project
+	-Now we copy the code from repository to our local
+Build our new project
+	-mkdir path/project_name/devops/local/docker$ bash geppetto_compose.sh -c
+	-docker ps -a
+Run it in local
+	-cd/project_name/application/client/desktop npm i
+	-ng serve --port 0000
+check whether the template will generate (or) not 
+	-If there is any problem with the generation then check the console
+	-fix the issue in newly generated code
+	-remove the container
+		docker rm -f containerId
+	-remove the image
+		docker rmi imagename
+Again build the application & run it in local
+		
 # Conclusion:
 Finally we have added the new template to geppetto application  
 ![Screenshot from 2021-05-11 21-39-21](https://user-images.githubusercontent.com/71403617/117848960-76f24600-b2a1-11eb-81a9-e3d1016bf93f.png)
